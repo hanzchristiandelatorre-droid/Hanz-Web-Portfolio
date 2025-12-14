@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanz Christian - Professional Photographer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" onclick="navigateTo('home')">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+                <span>HC PHOTOGRAPHY</span>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="javascript:void(0)" onclick="navigateTo('home')" class="nav-link active" data-page="home">Home</a>
+                <a href="javascript:void(0)" onclick="navigateTo('about')" class="nav-link" data-page="about">About</a>
+                <a href="javascript:void(0)" onclick="navigateTo('projects')" class="nav-link" data-page="projects">Projects</a>
+                <a href="javascript:void(0)" onclick="navigateTo('resume')" class="nav-link" data-page="resume">Resume</a>
+            </div>
+
+            <div class="nav-contact">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>+63-912-654-9894</span>
+            </div>
+
+            <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">
+                <svg id="menuIcon" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="javascript:void(0)" onclick="navigateTo('home', true)" class="mobile-link" data-page="home">Home</a>
+            <a href="javascript:void(0)" onclick="navigateTo('about', true)" class="mobile-link" data-page="about">About</a>
+            <a href="javascript:void(0)" onclick="navigateTo('projects', true)" class="mobile-link" data-page="projects">Projects</a>
+            <a href="javascript:void(0)" onclick="navigateTo('resume', true)" class="mobile-link" data-page="resume">Resume</a>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <!-- Home Page -->
+    <section id="home-page" class="page active">
+        <div class="hero-layout">
+         <img src="myphoto.png" alt="Hanz Christian" class="hero-photo">
+         <h2 class="hero-subtitle">PHOTOGRAPHER</h2>
+        </div>
+    </section>
+
+
+      
+
+
+    <!-- About Page -->
+    <section id="about-page" class="page">
+        <div class="content-container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="page-title">ABOUT</h2>
+                    <p class="about-email">hanzchristian@photography.com</p>
+                    
+                    <p class="about-text">
+                        Photographer specializing in landscape, portrait, and street photography. 
+                        Currently a 3rd year college student at Inabanga College of Arts and Sciences, pursuing 
+                        my passion for capturing moments that tell compelling stories.
+                    </p>
+
+                    <p class="about-text">
+                        My work focuses on natural lighting and authentic emotions, creating images that 
+                        resonate with viewers. I believe every photograph should evoke feeling and preserve 
+                        memories that last forever.
+                    </p>
+
+                    <div class="about-location">
+                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Inabanga, Bohol</span>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <img src="About.png" alt="Photographer portrait">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Page -->
+    <section id="projects-page" class="page">
+        <div class="content-container">
+            <h2 class="page-title-center">MY PROJECTS</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card" onclick="navigateTo('gallery-landscape')">
+                    <img src="Nature2.jpg" alt="Nature & Landscapes">
+                    <div class="project-overlay">
+                        <span class="project-category">Landscape</span>
+                        <h3 class="project-title">Nature & Landscapes</h3>
+                    </div>
+                </div>
+                <div class="project-card" onclick="navigateTo('gallery-portrait')">
+                    <img src= "Portrait.jpg" alt="Portrait Sessions">
+                    <div class="project-overlay">
+                        <span class="project-category">Portrait</span>
+                        <h3 class="project-title">Portrait Sessions</h3>
+                    </div>
+                </div>
+                <div class="project-card" onclick="navigateTo('gallery-school')">
+                    <img src="act1.jpg" alt="School Activities">
+                    <div class="project-overlay">
+                        <span class="project-category">School</span>
+                        <h3 class="project-title">School Activities</h3>
+                    </div>
+                </div>
+                <div class="project-card" onclick="navigateTo('gallery-sunset')">
+                    <img src="Sunset2.jpg" alt="Sunset Collection">
+                    <div class="project-overlay">
+                        <span class="project-category">Sunset</span>
+                        <h3 class="project-title">Sunset Collection</h3>
+                    </div>
+                </div>
+                <div class="project-card" onclick="navigateTo('gallery-birthday')">
+                    <img src="bday 3.jpg" alt="Street Stories">
+                    <div class="project-overlay">
+                        <span class="project-category">Birthday</span>
+                        <h3 class="project-title">Birthday Shoots</h3>
+                    </div>
+                </div>
+                <div class="project-card" onclick="navigateTo('gallery-ocean')">
+                    <img src="Ocean2.jpg" alt="Ocean Views">
+                    <div class="project-overlay">
+                        <span class="project-category">Ocean</span>
+                        <h3 class="project-title">Ocean Views</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Landscape Gallery Page -->
+    <section id="gallery-landscape-page" class="page">
+        <div class="content-container">
+            <button class="back-to-projects-btn" onclick="navigateTo('projects')">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Projects
+            </button>
+            
+            <h2 class="page-title-center">Landscape Photography</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Landscape.jpg" alt="Landscape 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Nature4.jpg" alt="Sunset">
+                </div>
+                <div class="gallery-item">
+                    <img src="Nature1.jpg" alt="Ocean View">
+                </div>
+                <div class="gallery-item">
+                    <img src="Nature3.jpg" alt="Mountain">
+                </div>
+                <div class="gallery-item">
+                    <img src="Nature2.jpg" alt="Forest">
+                </div>
+                <div class="gallery-item">
+                    <img src="Nature7.jpg" alt="Lake">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portrait Gallery Page -->
+    <section id="gallery-portrait-page" class="page">
+        <div class="content-container">
+            <button class="back-to-projects-btn" onclick="navigateTo('projects')">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Projects
+            </button>
+            
+            <h2 class="page-title-center">Portrait Photography</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Portrait2.jpg" alt="Portrait 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Portrait3.jpg" alt="Portrait 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Portrait4.jpg" alt="Portrait 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="Portrait5.jpg" alt="Portrait 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="Portrait.jpg" alt="Portrait 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="Portrait6.jpg" alt="Portrait 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- School Gallery Page -->
+    <section id="gallery-school-page" class="page">
+        <div class="content-container">
+            <button class="back-to-projects-btn" onclick="navigateTo('projects')">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Projects
+            </button>
+            
+            <h2 class="page-title-center">School Activities</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="act1.jpg" alt="act 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="act2.jpg" alt="act 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="act3.jpg" alt="act 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="act4.jpg" alt="act 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="act5.jpg" alt="act 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="act6.jpg" alt="act 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Sunset Gallery Page -->
+    <section id="gallery-sunset-page" class="page">
+        <div class="content-container">
+            <button class="back-to-projects-btn" onclick="navigateTo('projects')">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Projects
+            </button>
+            
+            <h2 class="page-title-center">Sunset Photography</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Sunset1.jpg" alt="Sunset 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Sunset2.jpg" alt="Sunset 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Sunset3.jpg" alt="Sunset 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="Sunset4.jpg" alt="Sunset 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="Sunset5.jpg" alt="Sunset 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="Sunset6.jpg" alt="Sunset 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Birthday Gallery Page -->
+    <section id="gallery-birthday-page" class="page">
+        <div class="content-container">
+            <button class="back-to-projects-btn" onclick="navigateTo('projects')">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Projects
+            </button>
+            
+            <h2 class="page-title-center">Birthday Photography</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="bday 1.jpg" alt="bday 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="bday 2.jpg" alt="bday 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="bday 3.jpg" alt="bday 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="bday 4.jpg" alt="bday 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="bday 5.jpg" alt="bday 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="bday 6.jpg" alt="bday 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Ocean Views Gallery Page -->
+    <section id="gallery-ocean-page" class="page">
+        <div class="content-container">
+            <button class="back-to-projects-btn" onclick="navigateTo('projects')">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Projects
+            </button>
+            
+            <h2 class="page-title-center">Ocean Views Photography</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Ocean1.jpg" alt="Ocean 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="Ocean2.jpg" alt="Ocean 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="Ocean3.jpg" alt="Ocean 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="Ocean4.jpg" alt="Ocean 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="Ocean5.jpg" alt="Ocean 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="Ocean6.jpg" alt="Ocean 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Resume Page -->
+    <section id="resume-page" class="page">
+        <div class="content-container">
+            <div class="resume-grid">
+                <div class="resume-left">
+                    <h3 class="section-title">SKILLS</h3>
+                    
+                    <div class="skills-section">
+                        <h4 class="subsection-title">Photography Skills</h4>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Portrait Photography</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Landscape Photography</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Photo Editing</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Adobe Lightroom</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Adobe Photoshop</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interests-section">
+                        <h4 class="subsection-title">Interests</h4>
+                        <div class="interests-grid">
+                            <div class="interest-card">
+                                <svg class="interest-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                    <circle cx="12" cy="13" r="4"></circle>
+                                </svg>
+                                <p>Photography</p>
+                            </div>
+                            <div class="interest-card">
+                                <span class="interest-emoji">🎨</span>
+                                <p>Visual Arts</p>
+                            </div>
+                            <div class="interest-card">
+                                <span class="interest-emoji">✈️</span>
+                                <p>Travel</p>
+                            </div>
+                            <div class="interest-card">
+                                <span class="interest-emoji">🌄</span>
+                                <p>Nature</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-right">
+                    <h3 class="section-title">EDUCATION & EXPERIENCE</h3>
+                    
+                    <div class="education-section">
+                        <h4 class="subsection-title">Education</h4>
+                        <div class="education-card">
+                            <h5>Inabanga College of Arts and Sciences</h5>
+                            <p class="education-level">3rd Year College Student</p>
+                            <p class="education-location">Inabanga, Bohol</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-section">
+                        <h4 class="subsection-title">Contact</h4>
+                        <div class="contact-card">
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <div>
+                                    <p class="contact-label">Email</p>
+                                    <a href="mailto:hanzchristiandelatorre@gmail.com" class="contact-value">hanzchristiandelatorre@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <div>
+                                    <p class="contact-label">Phone</p>
+                                    <a href="tel:09126549894" class="contact-value">0912 654 9894</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <div>
+                                    <p class="contact-label">Location</p>
+                                    <p class="contact-value">Inabanga, Bohol</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="capabilities-section">
+                        <h4 class="subsection-title">What I Can Do</h4>
+                        <div class="capabilities-list">
+                            <p>• Portrait & Event Photography</p>
+                            <p>• Landscape & Nature Photography</p>
+                            <p>• Photo Editing & Retouching</p>
+                            <p>• Digital Asset Management</p>
+                            <p>• Creative Direction</p>
+                            <p>• Studio & Natural Lighting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <style>
+        /* Back to Projects Button */
+        .back-to-projects-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #1f2937;
+            color: white;
+            border: 2px solid #06b6d4;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        
+        .back-to-projects-btn:hover {
+            background: #06b6d4;
+            color: black;
+        }
+        
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 16rem;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Responsive Gallery */
+        @media (min-width: 640px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .gallery-item img {
+                height: 18rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+            
+            .gallery-item img {
+                height: 20rem;
+            }
+        }
+    </style>
+</body>
+</html>
